@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #0f172a;
+    color: white;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 66px;
+}
+
+.tabs {
+    margin: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background: #1e293b;
+    color: white;
+    border-radius: 8px;
+}
+
+.tab-btn.active {
+    background: #22c55e;
+}
+
+.game-box {
+    font-size: 60px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 10px;
+    background: #111;
+    color: #00ffcc;
+    box-shadow: 0 0 20px #f0faff;
+}
+.game-box-pattern{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    margin: 50px auto;
+    width: 600px;
+    border-radius: 10px;
+    background: #111;
+    color: #00ffcc;
+    box-shadow: 0 0 20px #f0faff;
+}
+#display{
+    font-size: 25px;
+}
+
+.info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.score {
+    margin-top: 10px;
+    font-size: 30px;
+}
+#instruction{
+    font-size: 43px;
+}
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: lime;
+    transition: 0.3s;
+}
+
+.low-time {
+    color: red;
+    transform: scale(1.3);
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 20px auto;
+    padding: 13px 18px;
+
+    background: linear-gradient(135deg, #1e2a38, #2d3e50);
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    color: #f0faff;
+
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Individual items */
+.stats p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Highlight numbers */
+.stats span {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Timer styling */
+.Time-left span {
+    color: #00d4ff;
+}
+
+/* Trials styling */
+.trials span {
+    color: #ffd166;
+}
+
+/* Accuracy styling */
+.accuracy span {
+    color: lime;
+}
+
+/* Responsive (mobile friendly) */
+@media (max-width: 600px) {
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/*Mode 3*/
+#mode3-tabs {
+    margin-top: 10px;
+}
+
+.sub-tab-btn {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background: #334155;
+    color: white;
+    border-radius: 6px;
+}
+
+.sub-tab-btn.active {
+    background: #f59e0b;
+}
+
+#color-container {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.color-box[data-color="red"] { background: red; }
+.color-box[data-color="green"] { background: green; }
+.color-box[data-color="blue"] { background: blue; }
+.color-box[data-color="yellow"] { background: yellow; }
+
+.color-box.active {
+    opacity: 1;
+    transform: scale(1.1);
+}

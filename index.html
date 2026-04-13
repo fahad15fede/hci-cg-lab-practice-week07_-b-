@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Keyboard Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1> 🚥 KEYBOARD REACTION GAME </h1>
+
+    <div>
+        <button class="tab-btn active" onclick="switchMode(1)">Number or Letter</button>
+        <button class="tab-btn" onclick="switchMode(2)">Which one?</button>
+        <button class="tab-btn" onclick="switchMode(3)">Guess the Pattern</button>
+    </div>
+
+    <div id="mode3-sub-tabs" style="display:none;">
+        <button class="sub-tab-btn active" onclick="switchSubMode(1)">Alpha-numeric Pattern</button>
+        <button class="sub-tab-btn" onclick="switchSubMode(2)">Color Pattern</button>
+    </div>
+
+    <div class="stats">
+        <p class="Time-left">Time Remaining : <span id="timer">30 </span> sec(s)</p>
+        <p class="trials">Trials: <span id="trials">0</span></p>
+        <p class="accuracy">Accuracy: <span id="acc">0</span>%</p>
+    </div>
+
+    <div class="game-box" id="display">Press SPACE to Start</div>
+    <div class="game-box-pattern" id="patternBox" style="display: none;">Press SPACE to Start</div>
+    
+    <div id="color-container" style="display:none;">
+        <div class="color-box" data-color="red"></div>
+        <div class="color-box" data-color="green"></div>
+        <div class="color-box" data-color="blue"></div>
+        <div class="color-box" data-color="yellow"></div>
+    </div>
+
+    <div class="info"> 
+        <p id="instruction">To score, press the 'L' key for letters and  'A' key for numbers</p>
+        <p class="score">Score: <span id="score">0</span></p> 
+    </div>
+
+    <audio id="correct_sound" src="correct_sound.mp3"></audio>
+    <audio id="wrong_sound" src="wrong_sound.mp3"></audio>
+    <audio id="timerEnding_sound" src="timer_last.mp3" ></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
