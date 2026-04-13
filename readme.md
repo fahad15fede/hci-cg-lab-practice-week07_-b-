@@ -1,87 +1,89 @@
 🚥 Keyboard Reaction Game
 
-An interactive browser-based game designed to test and improve your reaction time, memory, and focus through multiple engaging game modes.
+An interactive browser-based application designed using Human-Computer Interaction (HCI) principles to evaluate and enhance reaction time, cognitive processing, memory, and user attention.
 
 🎮 Game Modes
-1. 🔤 Number or Letter
-A random character (letter or number) is displayed.
-Press:
-L → if it’s a letter
-A → if it’s a number
-Tests quick recognition and decision-making.
-2. ⌨️ Which One?
-A random alphanumeric character is shown.
-Press the exact same key on your keyboard.
-Focuses on reaction speed and accuracy.
-3. 🧠 Guess the Pattern
+1. 🔤 Number or Letter (Stimulus Classification Task)
+The system displays a random alphanumeric stimulus.
+User must classify it:
+L → Letter
+A → Number
+Focus: cognitive decision-making + reaction speed
+2. ⌨️ Which One? (Direct Input Mapping)
+A stimulus (character) is presented.
+User must press the exact corresponding key.
+Focus: stimulus-response compatibility & motor response accuracy
+3. 🧠 Guess the Pattern (Sequential Memory Task)
 a) Alpha-numeric Pattern
-A sequence of characters is shown.
-Memorize and type it correctly.
-Sequence grows longer each round.
+Users observe a sequence of stimuli.
+They must reproduce it in correct order.
+Focus: short-term memory & recall accuracy
 b) 🎨 Color Pattern
-A pattern of flashing colors appears.
-Repeat the sequence by clicking the colored boxes.
-Similar to a memory game (like Simon Says).
-⏱️ Game Features
-30-second timer
-Real-time stats:
-Score
-Trials
-Accuracy (%)
-Sound effects:
-Correct input
-Wrong input
-Timer warning
-Visual feedback:
-Glow effects (green/red)
-Click animations
-CSV data export (Modes 1 & 2)
-Responsive design (works on smaller screens)
-🧠 Skills Tested
-Reaction Time ⚡
-Short-term Memory 🧩
-Focus & Attention 🎯
-Hand-eye Coordination 👀
-🛠️ Tech Stack
-HTML5 – Structure
-CSS3 – Styling & animations
-JavaScript (Vanilla) – Game logic
-▶️ How to Play
-Open the game in your browser.
-Select a game mode.
-Press SPACE to start.
-Follow the instructions displayed on screen.
-Try to score as high as possible before time runs out!
-📁 Project Structure
-📦 Keyboard-Reaction-Game
- ┣ 📜 index.html
- ┣ 📜 style.css
- ┣ 📜 script.js
- ┣ 🔊 correct_sound.mp3
- ┣ 🔊 wrong_sound.mp3
- ┗ 🔊 timer_last.mp3
-📊 Data Collection
-Reaction time is recorded (in milliseconds)
-Each action logs:
+A visual sequence of colors is presented.
+Users repeat the sequence via mouse interaction.
+Focus: visual memory + pattern recognition
+🧩 HCI Design Features
+Immediate Feedback System
+Visual (color glow, animations)
+Auditory (correct/wrong sounds)
+→ Enhances learnability & responsiveness
+Time Constraint (30s)
+→ Introduces cognitive load & urgency
+Progressive Interaction
+→ Pattern complexity increases over time (Mode 3)
+Error Handling
+→ Incorrect input triggers:
+Negative feedback
+Pattern reset (Mode 3)
+Affordances
+Buttons and color boxes clearly indicate interactivity
+Consistency
+Uniform feedback patterns across modes
+Visibility of System Status
+Timer, score, trials, and accuracy always visible
+📊 Performance Metrics
+
+The system tracks user performance in real time:
+
+Score → Reinforcement feedback
+Trials → Total attempts
+Accuracy (%) → Correct / Total responses
+Reaction Time (ms) → Measured per interaction
+📁 Data Collection
+
+User interaction data is recorded and exported as CSV files:
+
 Mode
 Stimulus
-Key pressed
-Correct/Incorrect
-Reaction time
+User Input
+Correct / Incorrect
+Reaction Time
 
-Exported as a CSV file for analysis.
+This supports usability analysis and behavioral evaluation.
 
-🚀 Future Improvements
-Difficulty scaling (faster patterns)
-High score system
-Leaderboard
-Better UI animations
-Mobile touch optimization
-Full data export for Mode 3
-💡 Notes
-Game prevents input during pattern display.
-Input is disabled when the timer ends.
-Visual and audio feedback enhance user experience.
+⏱️ Interaction Flow
+User selects a mode
+Presses SPACE to initiate session
+System presents stimuli
+User responds via keyboard/mouse
+Immediate feedback is provided
+Session ends after 30 seconds
+🛠️ Tech Stack
+HTML5 → Interface structure
+CSS3 → Visual design & feedback
+JavaScript → Interaction logic & state management
+🎯 Usability Goals
+Minimize response time latency
+Maximize user engagement
+Provide clear feedback loops
+Ensure low learning curve
+Maintain interaction consistency
+🔮 Future Improvements (HCI-Oriented)
+Adaptive difficulty based on user performance (adaptive systems)
+Eye-tracking or advanced input analysis
+Personalized feedback dashboards
+Gamification elements (badges, streaks)
+Accessibility improvements (colorblind modes, audio cues)
 👨‍💻 Author
 
-Developed as a fun and educational project to improve cognitive and motor skills using JavaScript.
+Developed as an HCI-focused interactive system to explore how users respond to time-critical stimuli and memory-based challenges.
